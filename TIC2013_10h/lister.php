@@ -1,64 +1,67 @@
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
-<title>Recherche d'offres</title>
-<link href="css.css" rel="stylesheet" type="text/css" />
+	<meta charset="utf-8" />
+	<title>Recherche d'offres</title>
+	<link href="css.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
-<h1>Recherche d'offres</h1>
-<p>
-  <?php
-	if (!isset($_POST["domaine"]) || !isset($_POST["ville"])) {
-		echo "<p>Utiliser le formulaire de recherche d'offre</p>";
-		echo "<p><a href='menu.html'>Retour</a></p>";
-		die();
-	}
-	
-	$domaine = $_POST["domaine"];
-	$ville = $_POST["ville"];
-	
-	if ($domaine == "" && $ville == "") {
-		echo "<p>Un des deux champs est obligatoire</p>";
-		echo "<p><a href='menu.html'>Retour</a></p>";
-		die();
-	}
-	
-	mysql_connect("127.0.0.1", "root", "");
-	mysql_select_db("bd_10h_2013");
-	
-	$req = "SELECT *
+	<h1>Recherche d'offres</h1>
+	<p>
+		<?php
+		if (!isset($_POST["domaine"]) || !isset($_POST["ville"])) {
+			echo "<p>Utiliser le formulaire de recherche d'offre</p>";
+			echo "<p><a href='menu.html'>Retour</a></p>";
+			die();
+		}
+
+		$domaine = $_POST["domaine"];
+		$ville = $_POST["ville"];
+
+		if ($domaine == "" && $ville == "") {
+			echo "<p>Un des deux champs est obligatoire</p>";
+			echo "<p><a href='menu.html'>Retour</a></p>";
+			die();
+		}
+
+		mysql_connect("127.0.0.1", "root", "");
+		mysql_set_charset('utf8');
+		mysql_select_db("bd_10h_2013");
+
+		$req = "SELECT *
 			FROM offre
 			WHERE domaine_offre = '$domaine' OR ville_entreprise = '$ville'";
-	$res = mysql_query($req);
-	if (mysql_num_rows($res) == 0) {
-		echo "<p>Désolé, il n'y a pas d'offres pour ce domaine et/ou cette ville</p>";
-		echo "<p><a href='menu.html'>Retour</a></p>";
-		die();
-	}
-	
-	echo "<table border='1'>";
-	echo "<tr>";
-	echo "<td>Référence</td>";
-	echo "<td>Entreprise</td>";
-	echo "<td>Domaine</td>";
-	echo "<td>Postes</td>";
-	echo "<td>Villes</td>";
-	echo "</tr>";
+		$res = mysql_query($req);
+		if (mysql_num_rows($res) == 0) {
+			echo "<p>DÃ©solÃ©, il n'y a pas d'offres pour ce domaine et/ou cette ville</p>";
+			echo "<p><a href='menu.html'>Retour</a></p>";
+			die();
+		}
 
-	while ($offre = mysql_fetch_assoc($res)) {
+		echo "<table border='1'>";
 		echo "<tr>";
-		echo "<td>{$offre['ref']}</td>";
-		echo "<td>{$offre['libelle_entreprise']}</td>";
-		echo "<td>{$offre['domaine_offre']}</td>";
-		echo "<td>{$offre['nombre_poste']}</td>";
-		echo "<td>{$offre['ville_entreprise']}</td>";
+		echo "<td>RÃ©fÃ©rence</td>";
+		echo "<td>Entreprise</td>";
+		echo "<td>Domaine</td>";
+		echo "<td>Postes</td>";
+		echo "<td>Villes</td>";
 		echo "</tr>";
-	}
-	echo "</table>";
-?>
-</p>
-<p><a href="menu.html">Retour</a></p>
+
+		while ($offre = mysql_fetch_assoc($res)) {
+			echo "<tr>";
+			echo "<td>{$offre['ref']}</td>";
+			echo "<td>{$offre['libelle_entreprise']}</td>";
+			echo "<td>{$offre['domaine_offre']}</td>";
+			echo "<td>{$offre['nombre_poste']}</td>";
+			echo "<td>{$offre['ville_entreprise']}</td>";
+			echo "</tr>";
+		}
+		echo "</table>";
+		?>
+	</p>
+	<p><a href="menu.html">Retour</a></p>
 </body>
+
 </html>

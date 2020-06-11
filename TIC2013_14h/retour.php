@@ -1,66 +1,68 @@
-<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
-<html>
+<!DOCTYPE html>
+<html lang="en">
+
 <head>
-<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-<title>Document sans titre</title>
-<link href="css/css.css" rel="stylesheet" type="text/css">
+	<meta charset="utf-8">
+	<title>Retour d'un équipement</title>
+	<link href="css/css.css" rel="stylesheet" type="text/css">
 </head>
 
 <body>
-<h1>Retour d'un équipement</h1>
-<p>
-<?php 
-if (!isset($_POST["ncin"]) || !isset($_POST["equip"])) {
-	echo "<p>Veuillez utiliser le formulaire de retour</p>";
-	die();
-}
+	<h1>Retour d'un équipement</h1>
 
-$ncin = $_POST["ncin"];
-$equip = $_POST["equip"];
+	<?php
+	if (!isset($_POST["ncin"]) || !isset($_POST["equip"])) {
+		echo "<p>Veuillez utiliser le formulaire de retour</p>";
+		die();
+	}
 
-if ($ncin == '') {
-	echo "<p>Indiquez le numéro de CIN du client</p>";
-	die();
-}
+	$ncin = $_POST["ncin"];
+	$equip = $_POST["equip"];
 
-mysql_connect("127.0.0.1", "root", "");
-mysql_select_db("bd_14h_2013");
+	if ($ncin == '') {
+		echo "<p>Indiquez le numéro de CIN du client</p>";
+		die();
+	}
 
-$req = "SELECT *
+	mysql_connect("127.0.0.1", "root", "");
+	mysql_set_charset('utf8');
+	mysql_select_db("bd_14h_2013");
+
+	$req = "SELECT *
 		FROM client
 		WHERE ncin = '$ncin'";
-$res = mysql_query($req);
-if (mysql_num_rows($res) == 0) {
-	echo "<p>Numéro de CIN inexistant</p>";
-	die();
-}
+	$res = mysql_query($req);
+	if (mysql_num_rows($res) == 0) {
+		echo "<p>Numéro de CIN inexistant</p>";
+		die();
+	}
 
-$client = mysql_fetch_assoc($res);
-echo "<ul>";
-echo "<li><b>Nom & prénom : </b> {$client['nom']} {$client['prenom']}</li>";
-echo "<li><b>Téléphone : </b> {$client['tel']}</li>";
-echo "</ul>";
+	$client = mysql_fetch_assoc($res);
+	echo "<ul>";
+	echo "<li><b>Nom & prénom : </b> {$client['nom']} {$client['prenom']}</li>";
+	echo "<li><b>Téléphone : </b> {$client['tel']}</li>";
+	echo "</ul>";
 
-$req = "SELECT *
+	$req = "SELECT *
 		FROM location
 		WHERE ref_equipement = '$equip' AND ncin_client = '$ncin'";
-$res = mysql_query($req);
-if (mysql_num_rows($res) == 0) {
-	echo "<p>Le client n'a pas encore loué cet équipement</p>";
-	die();
-}
+	$res = mysql_query($req);
+	if (mysql_num_rows($res) == 0) {
+		echo "<p>Le client n'a pas encore loué cet équipement</p>";
+		die();
+	}
 
-$req = "UPDATE equipement
+	$req = "UPDATE equipement
 		SET disponible = 'O'
 		WHERE ref = '$equip'";
-mysql_query($req) or die(mysql_error());
-if (mysql_affected_rows() == -1) {
-	echo "<p>Echec de l'opération</p>";
-	die();
-}
+	mysql_query($req) or die(mysql_error());
+	if (mysql_affected_rows() == -1) {
+		echo "<p>Echec de l'opération</p>";
+		die();
+	}
 
-echo "<p>à bientôt</p>";
-?>
-</p>
+	echo "<p>à bientôt</p>";
+	?>
 </body>
+
 </html>

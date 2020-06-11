@@ -4,7 +4,12 @@ body {
 	color: #000066;
 	background-color: #e1ffff;
 }
+
 h1 {
 	text-align: center;
 	color: #6666FF;
+}
+
+table {
+	width: 100%
 }
