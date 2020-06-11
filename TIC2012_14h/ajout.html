@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ajout d'un commentaire</title>
+  <script language="javascript">
+    function verif() {
+      var pseudo, sujet, contenu;
+
+      pseudo = document.f.pseudo.value;
+      sujet = document.f.num_sujet.selectedIndex;
+      contenu = document.f.contenu.value;
+
+      if (pseudo.length < 6) {
+        alert("Le pseudo doit être composé d'au moins 6 caractères");
+        return false;
+      }
+
+      if (sujet == 0) {
+        alert("Sélectionner un sujet SVP");
+        return false;
+      }
+
+      if (contenu == "") {
+        alert("Le commentaire est obligatoire");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+  <h1>Ajout d'un commentaire</h1>
+  <form method="POST" name="f" action="ajout.php" onsubmit="return verif()">
+    <fieldset>
+      <legend>Informations</legend>
+      <table id="table1">
+        <tr>
+          <td>Pseudo</td>
+          <td><input type="password" name="pseudo" size="20"></td>
+        </tr>
+        <tr>
+          <td>Sujet</td>
+          <td>
+            <select size="1" name="num_sujet">
+							<option value="-1">Sélectionner le sujet</option>
+							<option value="1">Les enregistrements et les fichiers</option>
+							<option value="2">La récursivité</option>
+							<option value="3">Les algorithmes de tri</option>
+							<option value="4">Les algorithmes arithmétiques</option>
+						</select>
+          </td>
+        </tr>
+        <tr>
+          <td>Commentaires</td>
+          <td><textarea rows="6" name="contenu" cols="34"></textarea></td>
+        </tr>
+      </table>
+    </fieldset>
+    <p class="submit">
+      <input type="submit" value="Ajouter">
+      <input type="reset" value="Annuler">
+    </p>
+  </form>
+</body>
+
+</html>

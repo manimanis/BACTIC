@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Statistiques</title>
+    <script src="controle.js"></script>
+</head>
+<body>
+    <form name="f" action="statistiques.php" method="post" onsubmit="return verif_stat_form();">
+        <fieldset>
+            <legend>Statistiques</legend>
+            <table>
+                <tr>
+                    <td>Pilote</td>
+                    <td>
+                        <select name="matricule">
+                            <option value="">Sélectionner un pilote</option>
+                            <option value="BL68">Bellili Lamine</option>
+                            <option value="CN70">Chawachi Noura</option>
+                            <option value="KY75">Kefi Youssra</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <th><input type="submit" value="Editer"></th>
+                </tr>
+            </table>
+        </fieldset>
+    </form>
+</body>
+</html>

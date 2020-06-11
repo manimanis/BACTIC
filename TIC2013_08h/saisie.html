@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>La saisie des notes</title>
+  <link rel="stylesheet" type="text/css" href="css/css.css">
+  <script language="javascript" src="test.js"></script>
+</head>
+
+<body>
+
+  <h1>La saisie des notes</h1>
+  <form method="POST" name="f" action="saisir.php" onsubmit="return validerSaisieNotes()">
+    <table id="saisie">
+      <tr>
+        <td><b>Numéro de l'élève</b></td>
+        <td colspan="2"><input type="text" name="num_eleve" size="20"></td>
+      </tr>
+      <tr>
+        <td colspan="3"><hr></td>
+      </tr>
+      <tr>
+        <td><b>Matières</b></td>
+        <td><b>Note du DC</b></td>
+        <td><b>Note du DS</b></td>
+      </tr>
+      <tr>
+        <td>
+          <select size="1" name="matiere">
+						<option selected>Choisir une matière</option>
+						<option value="Algo">Algorithmique et Programmation</option>
+						<option value="BD">Base de données</option>
+						<option value="TIC">Technologies de l&#39;Information et de la Communication</option>
+					</select>
+        </td>
+        <td>
+          <input type="text" name="dc" size="8">
+        </td>
+        <td>
+          <input type="text" name="ds" size="8">
+        </td>
+      </tr>
+      <tr>
+        <td colspan="3">
+          <input type="reset" value="Annuler">
+          <input type="submit" value="Valider">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>

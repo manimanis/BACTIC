@@ -1,0 +1,73 @@
+<!doctype html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <script src="controle.js"></script>
+    </head>
+    <body onload="genererCaptcha()">
+        <h1>Evaluation d'un hôtel</h1>
+        <form name="f" method="post" action="evaluation.php" onsubmit="return verif()">
+            <table>
+                <tr>
+                    <td>Hôtel</td>
+                    <td>
+                        <select name="h">
+                            <option value="-1">Choisir un hôtel</option>
+                            <option value="10">5 Stars</option>
+                            <option value="20">Globe</option>
+                            <option value="30">The Sun</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Accueil</td>
+                    <td>
+                        <input type="radio" name="acc" value="3"> Trés satisfait
+                        <input type="radio" name="acc" value="2"> Satisfait
+                        <input type="radio" name="acc" value="1"> Peu Satisfait
+                    </td>
+                </tr>
+                <tr>
+                    <td>Restauration</td>
+                    <td>
+                        <input type="radio" name="rest" value="3"> Trés satisfait
+                        <input type="radio" name="rest" value="2"> Satisfait
+                        <input type="radio" name="rest" value="1"> Peu Satisfait
+                    </td>
+                </tr>
+                <tr>
+                    <td>Extra</td>
+                    <td>
+                        <input type="checkbox" name="pc" value="4"> Piscine Couverte<br>
+                        <input type="checkbox" name="pp" value="2"> Plage Privée<br>
+                        <input type="checkbox" name="cw" value="1"> Couverture Wifi<br>
+                    </td>
+                </tr>
+                <tr>
+                    <td colspan="2">
+                        <table>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td align="right">Captcha</td>
+                                <td><input type="text" name="captcha"></td>
+                                <td><input type="button" value="Actualiser" onclick="genererCaptcha()"></td>
+                            </tr>
+                            <tr>
+                                <td colspan="2">Combien de lettres majuscules dans la zone Captcha ?</td>
+                                <td colspan="2">&nbsp;</td>
+                            </tr>
+                            <tr>
+                                <td>&nbsp;</td>
+                                <td align="right">Réponse</td>
+                                <td><input type="text" name="reponse"></td>
+                                <td>&nbsp;</td>
+                            </tr>
+                        </table>
+                    </td>
+                </tr>
+            </table>
+            <input type="reset" value="Annuler">
+            <input type="submit" value="Valider">
+        </form>
+    </body>
+</html>

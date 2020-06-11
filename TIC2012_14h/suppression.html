@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Suppression de commentaires</title>
+  <script language="javascript">
+    function verif() {
+      var pseudo, sujet, contenu;
+
+      pseudo = document.f.pseudo.value;
+      sujet = document.f.num_sujet.selectedIndex;
+
+      if (pseudo.length < 6) {
+        alert("Le pseudo doit être composé d'au moins 6 caractères");
+        return false;
+      }
+
+      if (sujet == 0) {
+        alert("Sélectionner un sujet SVP");
+        return false;
+      }
+
+      return true;
+    }
+  </script>
+  <link rel="stylesheet" href="styles.css">
+</head>
+
+<body>
+
+  <h1>Suppression de commentaires</h1>
+  <form method="POST" name="f" action="supprimer.php" onsubmit="return verif()">
+    <fieldset>
+      <legend>Informations</legend>
+      <table id="table1">
+        <tr>
+          <td>Pseudo</td>
+          <td><input type="password" name="pseudo" size="20"></td>
+        </tr>
+        <tr>
+          <td>Sujet</td>
+          <td>
+            <select size="1" name="num_sujet">
+              <option value="-1">Sélectionner le sujet</option>
+              <option value="1">Les enregistrements et les fichiers</option>
+              <option value="2">La récursivité</option>
+              <option value="3">Les algorithmes de tri</option>
+              <option value="4">Les algorithmes arithmétiques</option>
+            </select>
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+    <p class="submit">
+      <input type="submit" value="Supprimer">
+      <input type="reset" value="Annuler">
+    </p>
+  </form>
+</body>
+
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Statistiques</title>
+    <script src="controle.js"></script>
+</head>
+
+<body>
+    <fieldset style="width: 960px; margin: 10px auto;">
+        <legend>Statistiques</legend>
+
+        <form name="f" action="statistiques.php" method="post" onsubmit="return test2()">
+            <table width="100%">
+                <tr>
+                    <td>Thème du sondage</td>
+                    <td>
+                        <select name="nums" id="nums">
+                            <option value="0">Sélectionner un thème</option>
+                            <option value="1">Les réseaux sociaux</option>
+                            <option value="2">Les jeux vidéos</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td><button type="submit">Editer</button></td>
+                </tr>
+            </table>
+        </form>
+
+    </fieldset>
+</body>
+
+</html>

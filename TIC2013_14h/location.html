@@ -1,0 +1,51 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN"
+"http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+<title>Document sans nom</title>
+<link href="css/css.css" rel="stylesheet" type="text/css">
+<script language="JavaScript" type="text/javascript" src="test.js"></script>
+
+</head>
+
+<body>
+<h1>Location d'un équipement</h1>
+<form action="location.php" method="post" name="f" id="f" onSubmit="return valider()">
+<fieldset>
+	<legend>Location équipement</legend>
+	<table width="100%">
+		<tr>
+			<td width="24%">Numéro de carte d'identité </td>
+			<td width="76%"><input name="ncin" type="text" id="ncin"></td>
+		</tr>
+		<tr>
+		  <td>Equipement</td>
+		  <td><select name="equip" id="equip">
+		    <option value="0" selected>Choisir un équipement</option>
+		    <option value="JSK01">Jet-Ski</option>
+		    <option value="PCH76">Parachute</option>
+		    <option value="PED01">Pédalo individuel</option>
+		    <option value="PED02">Pédalo double</option>
+	      </select>		  </td>
+	  </tr>
+		<tr>
+		  <td>Durée</td>
+		  <td><select name="duree" id="duree">
+		    <option selected>1</option>
+		    <option>2</option>
+		    <option>3</option>
+		    <option>4</option>
+		    <option>5</option>
+		    </select>		  </td>
+	  </tr>
+		<tr>
+		  <td>&nbsp;</td>
+		  <td><input type="submit" value="Valider"> <input type="reset" value="Annuler"></td>
+	  </tr>
+	</table>
+</fieldset>
+</form>
+<p>&nbsp;</p>
+</body>
+</html>

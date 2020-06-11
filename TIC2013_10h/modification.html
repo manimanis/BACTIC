@@ -1,0 +1,33 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-1" />
+<title>Chagement de la ville</title>
+<link href="css.css" rel="stylesheet" type="text/css" />
+<script language="JavaScript" type="text/javascript" src="test.js"></script>
+</head>
+
+<body>
+<h1>Chagement de la ville</h1>
+<fieldset>
+	<legend>Changement ville</legend>
+	<form id="f" name="f" method="post" action="modifier.php" onsubmit="return verifForm1(-1)">
+	  <table width="100%" border="0">
+		<tr>
+		  <th width="12%" scope="row"><div align="left">Num&eacute;ro CIN </div></th>
+		  <td width="88%"><input name="ncin" type="text" id="ncin" onblur="verifForm1(0)" /></td>
+		</tr>
+		<tr>
+		  <th scope="row"><div align="left">Nouvelle ville </div></th>
+		  <td><input name="nville" type="text" id="nville" onblur="verifForm1(1)" /></td>
+		</tr>
+		<tr>
+		  <th scope="row"><div align="left"></div></th>
+		  <td><input type="submit" name="Submit" value="Valider" /> <input type="reset" name="Submit2" value="Annuler" /></td>
+		</tr>
+	  </table>
+	</form>
+</fieldset>
+<p><a href="menu.html">Retour</a></p>
+</body>
+</html>

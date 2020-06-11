@@ -1,0 +1,57 @@
+﻿<!doctype html>
+<html>
+    <head>
+        <meta charset="utf8">
+        <title>Proposition d'une offre</title>
+        <style>
+        body { font-family: Garamond; font-size: 12pt;}
+        h1 { text-align: center; color: green; }
+        </style>
+        <script src="controle.js"></script>
+    </head>
+    <body>
+        <h1>Proposition d'une offre</h1>
+        <form name="f" action="ajout.php" method="post" onsubmit="return verif()">
+            <table>
+                <tr>
+                    <td>CIN</td>
+                    <td><input type="text" name="cin" onblur="this.value = espaces(this.value)"></td>
+                </tr>
+                <tr>
+                    <td>Nom</td>
+                    <td><input type="text" name="nom" onblur="this.value = espaces(this.value)"></td>
+                </tr>
+                <tr>
+                    <td>Prénom</td>
+                    <td><input type="text" name="prenom" onblur="this.value = espaces(this.value)"></td>
+                </tr>
+                <tr>
+                    <td>Téléphone</td>
+                    <td><input type="text" name="tel" onblur="this.value = espaces(this.value)"></td>
+                </tr>
+                <tr>
+                    <td>Article</td>
+                    <td>
+                        <select name="article">
+                            <option value="-1">Sélectionner un article</option>
+                            <option value="120">Les gants du gardien Attouga</option>
+                            <option value="212">Voiture 202 Bh</option>
+                            <option value="36">Luth du Hedi Jouini</option>
+                            <option value="46">Manuscrit d'Abou el Kacem Echebbi</option>
+                        </select>
+                    </td>
+                </tr>
+                <tr>
+                    <td>Prix Proposé</td>
+                    <td><input type="text" name="prix_propose" onblur="this.value = espaces(this.value)"></td>
+                </tr>
+                <tr>
+                    <td>
+                        <input type="reset" value="Annuler">
+                        <input type="submit" value="Valider">
+                    </td>
+                </tr>
+            </table>
+        </form>
+    </body>
+</html>
