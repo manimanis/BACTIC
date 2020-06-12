@@ -25,7 +25,7 @@ if (!isset($_POST['matricule'])) {
 }
 
 mysql_connect('127.0.0.1', 'root', '');
-
+mysql_set_charset('utf8');
 mysql_select_db('bd_2015');
 
 $matricule = $_POST['matricule'];

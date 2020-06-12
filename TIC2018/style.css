@@ -1,0 +1,13 @@
+body {
+  font-family: Georgia, 'Times New Roman', Times, serif;
+  font-size: 12pt;
+}
+
+h1 {
+  color: #009688;
+}
+
+#eval_hotel td:first-child {
+  color: #009688;
+  font-weight: bold;
+}

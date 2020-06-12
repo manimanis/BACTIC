@@ -4,6 +4,7 @@ if (!isset($_POST['mail']) || !isset($_POST['mdp']) || !isset($_POST['genre']) |
 }
 
 mysql_connect('127.0.0.1', 'root', '');
+mysql_set_charset('utf8');
 mysql_select_db('bd2019');
 
 $mail = $_POST['mail'];

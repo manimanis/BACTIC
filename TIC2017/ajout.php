@@ -15,6 +15,7 @@ $prixpropose = $_POST['prix_propose'];
 
 // connexion à la base de données
 mysql_connect("127.0.0.1", "root", "");
+mysql_set_charset('utf8');
 mysql_select_db("bd_tic_2017");
 
 // récupérer les informations sur l'article 

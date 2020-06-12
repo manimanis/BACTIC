@@ -1,14 +1,19 @@
 <?php
 mysql_connect("127.0.0.1", "root", "");
+mysql_set_charset('utf8');
 mysql_select_db("tic_2018");
 
 $h = $_POST['h'];
 $acc = $_POST['acc'];
 $rest = $_POST['rest'];
-$pc = (isset($_POST['pc'])) ? intval($_POST['pc']) : 0;
+// Extra piscine couverte
+$pc = (isset($_POST['pc'])) ? intval($_POST['pc']) : 0; 
+// Extra Plage Privée
 $pp = (isset($_POST['pp'])) ? intval($_POST['pp']) : 0;
+// Extra Couveture Wifi
 $cw = (isset($_POST['cw'])) ? intval($_POST['cw']) : 0;
-$ne = $pc + $pp + $cw;
+// Note Extra
+$ne = $pc + $pp + $cw; 
 $date = date('Y-m-d');
 
 

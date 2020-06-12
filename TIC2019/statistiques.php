@@ -15,6 +15,7 @@
     }
 
     mysql_connect('127.0.0.1', 'root', '');
+    mysql_set_charset('utf8');
     mysql_select_db('bd2019');
 
     $nums = intval($_POST['nums']);
