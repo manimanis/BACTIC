@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Livre d'or</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="ok.js"></script>
+</head>
+<body>
+    <h1>Livre d'or</h1>
+    <form action="" name="f" method="POST" onsubmit="return ok()">
+        <table>
+            <tr>
+                <td><b>Nom</b></td>
+                <td><input type="text" name="nom"></td>
+            </tr>
+            <tr>
+                <td><b>Prénom</b></td>
+                <td><input type="text" name="prenom"></td>
+            </tr>
+            <tr>
+                <td><b>Age</b></td>
+                <td><input type="number" name="age"></td>
+            </tr>
+            <tr>
+                <td><b>Pays</b></td>
+                <td>
+                    <select name="pays" id="pays">
+                        <option value="">Votre pays</option>
+                        <option>Tunisie</option>
+                        <option>France</option>
+                        <option>Angleterre</option>
+                        <option>Allemagne</option>
+                    </select>
+                </td>
+            </tr>
+            <tr>
+                <td><b>Vos impressions</b></td>
+                <td>
+                    <textarea name="impressions" id="" cols="30" rows="10"></textarea>
+                </td>
+            </tr>
+            <tr>
+                <td colspan="2" class="center">
+                    <input type="submit" value="Envoyer">
+                    <input type="reset" value="Annuler">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>
