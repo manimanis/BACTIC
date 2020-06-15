@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Test</title>
+    <link rel="stylesheet" href="css.css">
+    <script src="valide.js"></script>
+</head>
+<body>
+    <h1>Identification</h1>
+    <form name="f" action="ajout.php" method="post" onsubmit="return valide()">
+        <table>
+            <tr>
+                <td>CIN</td>
+                <td><input type="text" name="cin"></td>
+                <td>Nom</td>
+                <td><input type="text" name="nom"></td>
+                <td>Prénom</td>
+                <td><input type="text" name="prenom"></td>
+            </tr>
+        </table>
+        <hr>
+        <h2>Test</h2>
+        <h3>Exercice 1 (4 pts)</h3>
+        <p>Quels sont les opérateurs qui peuvent être utilisés avec les réels ?</p>
+        <p>
+            <select name="ex1">
+                <option value="1">AND, OR, NOT</option>
+                <option value="2">+, -, *, /</option>
+                <option value="3">DIV, MOD</option>
+            </select>
+        </p>
+        <h3>Exercice 2 (4 pts)</h3>
+        <p>Quel est l'opérateur qui peut être utilisé dans l'expression suivante:</p>
+        <p><code>
+            <pre>19 ... 3 = 1</pre>
+        </code></p>
+        <p>
+            <label><input type="radio" name="ex2" value="DIV"> DIV</label>
+            <label><input type="radio" name="ex2" value="AND"> AND</label>
+            <label><input type="radio" name="ex2" value="MOD"> MOD</label>
+        </p>
+        <h3>Exercice 3(12 pts = 4 + 4 + 4)</h3>
+        <table id="ex3">
+            <tr>
+                <td><input type="number" name="ex3_1"></td>
+                <td>somme &larr; a + b</td>
+            </tr>
+            <tr>
+                <td><input type="number" name="ex3_2"></td>
+                <td>Lire(a, b)</td>
+            </tr>
+            <tr>
+                <td><input type="number" name="ex3_3" value="4" readonly></td>
+                <td>Fin calcul</td>
+            </tr>
+            <tr>
+                <td><input type="number" name="ex3_4"></td>
+                <td>Ecrire(Somme)</td>
+            </tr>
+            <tr>
+                <td><input type="number" name="ex3_5" value="0" readonly></td>
+                <td>Début calcul</td>
+            </tr>
+        </table>
+        <p>
+            <input type="submit" value="Envoyer">
+        </p>
+    </form>
+</body>
+</html>
