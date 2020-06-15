@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Choix des exercices</title>
+  <link rel="stylesheet" href="css.css">
+  <script src="verif.js"></script>
+</head>
+<body>
+  <h1>Choix des exercices</h1>
+  <form action="afficher.php" name="f" target="main" method="post" onsubmit="return verif()">
+    <p>
+      <select name="ex">
+        <option value="">Choisissez un exercice</option>
+        <option value="ex1">Ex1 : Structures de données simples</option>
+        <option value="ex2">Ex2 : Structures de données composées</option>
+        <option value="ex3">Ex3 : Structures conditionnelles simples</option>
+        <option value="ex4">Ex4 : Structures conditionnelles généralisées</option>
+      </select>
+    </p>
+    <p><input type="submit" value="Afficher"></p>
+  </form>
+  <p><a href="accueil.html" target="main">Accueil</a></p>
+</body>
+</html>
