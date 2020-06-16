@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Location de voitures</title>
+  <link rel="stylesheet" href="css.css">
+  <script src="verif.js"></script>
+</head>
+<body>
+  <h1>Location de voitures</h1>
+  <form action="location.php" method="post" name="f" onsubmit="return verif()">
+    <table>
+      <tr>
+        <td><b>Numéro CIN</b></td>
+        <td><input type="text" name="num_cin"></td>
+      </tr>
+      <tr>
+        <td><b>Nom</b></td>
+        <td><input type="text" name="nom"></td>
+      </tr>
+      <tr>
+        <td><b>Prénom</b></td>
+        <td><input type="text" name="prenom"></td>
+      </tr>
+      <tr>
+        <td><b>Matricule voiture</b></td>
+        <td><input type="text" name="matricule_voit"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td class="center">
+          <input type="submit" value="Louer">
+          <input type="reset" value="Annuler">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
