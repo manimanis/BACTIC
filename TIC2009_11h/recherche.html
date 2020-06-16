@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Recherche d'employés</title>
+  <link rel="stylesheet" href="css.css">
+</head>
+<body>
+  <h1>Recherche d'employe</h1>
+  <form action="recherche.php" method="post" name="f">
+    <table>
+      <tr>
+        <td><b>Diplôme</b></td>
+        <td>
+          <select name="diplome">
+            <option>Ingénieur</option>
+            <option>Maitrise</option>
+            <option>Technicien Sup</option>
+            <option>Technicien</option>
+            <option>Autres</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Spécialité</b></td>
+        <td><input type="text" name="specialite"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td class="center">
+          <input type="submit" value="Rechercher">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

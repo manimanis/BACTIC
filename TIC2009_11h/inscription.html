@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription</title>
+  <link rel="stylesheet" href="css.css">
+  <script src="verif.js"></script>
+</head>
+<body>
+  <h1>Inscription</h1>
+  <form action="ajout.php" method="post" name="f" onsubmit="return verif()">
+    <table>
+      <tr>
+        <td><b>Nom et Prénom</b></td>
+        <td><input type="text" name="nom_prenom"></td>
+      </tr>
+      <tr>
+        <td><b>Age</b></td>
+        <td><input type="number" name="age"></td>
+      </tr>
+      <tr>
+        <td><b>Diplôme</b></td>
+        <td>
+          <select name="diplome" size="5">
+            <option>Ingénieur</option>
+            <option>Maitrise</option>
+            <option>Technicien Sup</option>
+            <option>Technicien</option>
+            <option>Autres</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Spécialité</b></td>
+        <td><input type="text" name="specialite"></td>
+      </tr>
+      <tr>
+        <td><b>Tél</b></td>
+        <td><input type="text" name="tel"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td class="center">
+          <input type="submit" value="Valider">
+          <input type="reset" value="Annuler">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
