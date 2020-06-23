@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription d'un assuré</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="valider.js"></script>
+</head>
+<body>
+  <h1>Inscription d'un assuré</h1>
+  <form action="inscrire.php" method="post" name="f" onsubmit="return verifier()">
+    <table>
+      <tr>
+        <td><b>Matricule</b></td>
+        <td><input type="text" name="matricule" size="10" maxlength="10"></td>
+      </tr>
+      <tr>
+        <td><b>N° CIN</b></td>
+        <td><input type="text" name="ncin" size="8" maxlength="8"></td>
+      </tr>
+      <tr>
+        <td><b>Nom</b></td>
+        <td><input type="text" name="nom"></td>
+      </tr>
+      <tr>
+        <td><b>Prénom</b></td>
+        <td><input type="text" name="prenom"></td>
+      </tr>
+      <tr>
+        <td><b>Etat civil</b></td>
+        <td>
+          <label><input type="radio" name="etatcivil" value="C"> Célibataire</label>
+          <label><input type="radio" name="etatcivil" value="D"> Divorcé</label>
+          <label><input type="radio" name="etatcivil" value="M"> Marié</label>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Nombre d'enfants assurés</b></td>
+        <td><input type="number" name="nbrenfant" min="0" max="10" value="0"></td>
+      </tr>
+      <tr>
+        <td><b>Type d'assurance</b></td>
+        <td>
+          <select name="typeassurance" size="3">
+            <option>Santé publique</option>
+            <option>Médecin de famille</option>
+            <option>Remboursement des dépenses</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <input type="submit" value="Inscrire">
+          <input type="reset" value="Annuler">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

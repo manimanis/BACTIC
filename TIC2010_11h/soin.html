@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Saisie d'un soin</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="valider.js"></script>
+</head>
+<body>
+  <h1>Saisie d'un soin</h1>
+  <form action="soin.php" method="post" name="f" onsubmit="return valider()">
+    <table>
+      <tr>
+        <td><b>Matricule</b></td>
+        <td><input type="text" name="matricule" size="10" maxlength="10"></td>
+      </tr>
+      <tr>
+        <td><b>Date du soin</b></td>
+        <td><input type="text" name="datesoin" size="10" maxlength="10"></td>
+      </tr>
+      <tr>
+        <td><b>Montant du soin</b></td>
+        <td><input type="number" name="montantsoin" step="0.001" value="0"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <input type="submit" value="Confirmer">
+          <input type="reset" value="Annuler">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

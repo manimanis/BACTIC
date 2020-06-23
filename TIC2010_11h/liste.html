@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste de soins de l'assuré</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="valider.js"></script>
+</head>
+<body>
+  <h1>Liste de soins de l'assuré</h1>
+  <form action="liste.php" method="post" name="f" onsubmit="return tester()">
+    <table>
+      <tr>
+        <td><b>Matricule</b></td>
+        <td><input type="text" name="matricule" size="10" maxlength="10"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <input type="submit" value="Lister">
+          <input type="reset" value="Annuler">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>
