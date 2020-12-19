@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Emprunt d'un livre</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="valider.js"></script>
+</head>
+<body>
+  <h1>Emprunt d'un livre</h1>
+  <form action="emprunt.php" method="post" name="f" onsubmit="return verif2()">
+    <table>
+      <tr>
+        <td><b>Numéro CIN</b></td>
+        <td><input type="text" name="cin" size="8" maxlength="8"></td>
+      </tr>
+      <tr>
+        <td><b>Numéro du livre</b></td>
+        <td><input type="text" name="numlivre" size="5" maxlength="5"></td>
+      </tr>
+      <tr>
+        <td><b>Date d'emprunt</b></td>
+        <td><input type="text" name="dateemprunt" size="10" maxlength="10"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <input type="submit" value="Emprunter">
+          <input type="reset" value="Annuler">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Inscription d'un client</title>
+  <script src="biblio.js"></script>
+</head>
+
+<body>
+  <h1>Inscription d'un client</h1>
+  <form action="inscription.php" method="post" name="f" onsubmit="return verif1()">
+    <fieldset>
+      <legend>Inscription d'un client</legend>
+      <table>
+        <tr>
+          <td><b>Nom</b></td>
+          <td><input type="text" name="nom"></td>
+        </tr>
+        <tr>
+          <td><b>Prénom</b></td>
+          <td><input type="text" name="prenom"></td>
+        </tr>
+        <tr>
+          <td><b>Téléphone</b></td>
+          <td><input type="text" name="tel" maxlength="8" size="8"></td>
+        </tr>
+        <tr>
+          <td><b>Adresse</b></td>
+          <td>
+            <textarea name="adresse" cols="30" rows="3"></textarea>
+          </td>
+        </tr>
+        <tr>
+          <td colspan="2"><hr></td>
+        </tr>
+        <tr>
+          <td><b>Mot de passe</b></td>
+          <td><input type="password" name="motpass"></td>
+        </tr>
+        <tr>
+          <td><b>Confirmation du mot de passe</b></td>
+          <td><input type="password" name="motpass2"></td>
+        </tr>
+        <tr>
+          <td>&nbsp;</td>
+          <td>
+            <input type="reset" value="Annuler">
+            <input type="submit" value="Valider">
+          </td>
+        </tr>
+      </table>
+    </fieldset>
+  </form>
+</body>
+
+</html>

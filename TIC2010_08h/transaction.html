@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Saisie d'une transaction</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="valider.js"></script>
+</head>
+<body>
+    <h1>Saisie d'une transaction</h1>
+    <form action="transaction.php" method="post" name="f" onsubmit="return validerSaisie()">
+        <table>
+            <tr>
+                <td><b>Date de la transaction</b></td>
+                <td><input type="text" name="datetrans" maxlength="10"></td>
+            </tr>
+            <tr>
+                <td><b>Numéro de compte</b></td>
+                <td><input type="text" name="numcompte" maxlength="20"></td>
+            </tr>
+            <tr>
+                <td><b>Libellé de la transaction</b></td>
+                <td><input type="text" name="libelletrans"></td>
+            </tr>
+            <tr>
+                <td><b>Montant de la transaction</b></td>
+                <td><input type="number" name="monttrans" step="0.001"></td>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>
+                    <input type="submit" value="Confirmer">
+                    <input type="reset" value="Annuler">
+                </td>
+            </tr>
+        </table>
+    </form>
+</body>
+</html>

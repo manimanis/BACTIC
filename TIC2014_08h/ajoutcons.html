@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajout d'une consultation</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="controle.js"></script>
+</head>
+
+<body>
+  <h1>Ajout d'une consultation</h1>
+  <form name="f" action="consultation.php" method="post" onsubmit="return verif_consultation()">
+    <table>
+      <tr>
+        <td><b>Matricule</b></td>
+        <td><input type="text" name="mat" maxlength="4" size="4"></td>
+      </tr>
+      <tr>
+        <td><b>Détails</b></td>
+        <td><textarea name="detailcons" cols="30" rows="10"></textarea></td>
+      </tr>
+      <tr>
+        <td><b>Prochain RDV après</b></td>
+        <td><input type="text" name="nbjours" maxlength="4" size="4"> jours</td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <input type="reset" value="Annuler">
+          <input type="submit" value="Confirmer">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>

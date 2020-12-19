@@ -1,0 +1,41 @@
+body  {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12pt;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.center {
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+}
+
+td:first-child {
+    font-weight: bold;
+}
+
+#ex3 {
+    margin: initial;
+    width: auto;
+}
+
+#ex3 input {
+    text-align: center;
+    width: 3em;
+}
+
+.table {
+    border-collapse: collapse;
+    width: 100%;
+}
+
+.table td, .table th {
+    border: #000 solid 1px;
+}

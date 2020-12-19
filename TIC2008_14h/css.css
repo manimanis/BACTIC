@@ -1,0 +1,22 @@
+body  {
+    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-size: 12pt;
+}
+
+h1 {
+    text-align: center;
+    font-size: 2.5em;
+}
+
+.center {
+    text-align: center;
+}
+
+table {
+    width: 80%;
+    margin: 0 auto;
+}
+
+td:first-child {
+    font-weight: bold;
+}

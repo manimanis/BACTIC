@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+  <meta charset="utf-8">
+  <title>Ajout d'un spectacle</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="controle.js"></script>
+</head>
+
+<body onload="annee()">
+  <h1>Ajout d'un spectacle</h1>
+  <form method="post" name="f" action="Ajout.php" onsubmit="return verif()">
+    <fieldset style="padding: 2">
+      <legend>Ajout d'un spectacle</legend>
+      <table border="0" width="100%" id="table1">
+        <tr>
+          <td>Pièce</td>
+          <td>Salle</td>
+          <td>Date du spectacle</td>
+        </tr>
+        <tr>
+          <td>
+            <select name="idpiece">
+              <option>Choisir une pièce</option>
+              <option value="1">Le trésor</option>
+              <option value="2">Le péché du succès</option>
+              <option value="3">Le gardien</option>
+              <option value="4">Les soldats de la lune</option>
+              <option value="5">L'éternel retour</option>
+            </select>
+          </td>
+          <td>
+            <select name="idsalle">
+              <option>Choisir une salle</option>
+              <option value="TM">Théâtre municipal</option>
+              <option value="QA">Quatrième Art</option>
+              <option value="EN">L'Etoile du Nord</option>
+              <option value="EA">Espace Artisto</option>
+            </select>
+          </td>
+          <td>
+            <input type="text" name="jj" size="2" maxlength="2">/
+            <input type="text" name="mm" size="2" maxlength="2">/
+            <input type="text" name="aaaa" size="4" maxlength="4"> (JJ/MM/AAAA)
+          </td>
+        </tr>
+      </table>
+      <p class="center">
+        <input type="reset" value="Annuler">
+        <input type="submit" value="Ajouter">
+      </p>
+    </fieldset>
+  </form>
+
+</body>
+
+</html>

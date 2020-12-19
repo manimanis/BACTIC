@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajout d'un patient</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="controle.js"></script>
+</head>
+
+<body>
+  <h1>Ajout d'un patient</h1>
+  <form name="f" action="ajout.php" method="post" onsubmit="return verif_ajout()">
+    <table>
+      <tr>
+        <td><b>Matricule</b></td>
+        <td><input type="text" name="mat" maxlength="4" size="4"></td>
+      </tr>
+      <tr>
+        <td><b>Nom</b></td>
+        <td><input type="text" name="nom" maxlength="20" size="20"></td>
+      </tr>
+      <tr>
+        <td><b>Prénom</b></td>
+        <td><input type="text" name="prenom" maxlength="20" size="20"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <input type="reset" value="Annuler">
+          <input type="submit" value="Valider">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>

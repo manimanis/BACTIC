@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Bon de commande</title>
+  <link rel="stylesheet" href="css.css">
+  <script src="verif.js"></script>
+</head>
+
+<body>
+  <h1>Bon de commande</h1>
+  <form name="f" action="facture.php" method="post" onsubmit="return verif()">
+    <table>
+      <tr>
+        <td><b>Nom & Prénom</b></td>
+        <td><input type="text" name="nom_prenom"></td>
+      </tr>
+      <tr>
+        <td><b>Produits</b></td>
+        <td>
+          <select name="produit">
+            <option value="">Choisissez un produit</option>
+            <option>Scanner</option>
+            <option>Imprimante Laser</option>
+            <option>Webcam</option>
+            <option>Souris</option>
+            <option>Ecran</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Quantité à commander</b></td>
+        <td><input type="number" name="qte"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td><input type="submit" value="Commander"></td>
+      </tr>
+    </table>
+  </form>
+</body>
+
+</html>

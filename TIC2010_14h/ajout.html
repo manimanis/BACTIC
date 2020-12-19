@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Ajout de livres</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="valider.js"></script>
+</head>
+<body>
+  <h1>Ajout de livres</h1>
+  <form action="ajout.php" method="post" name="f" onsubmit="return verif1()">
+    <table>
+      <tr>
+        <td><b>Numéro du livre</b></td>
+        <td><input type="text" name="numlivre" size="5" maxlength="5"></td>
+      </tr>
+      <tr>
+        <td><b>Type du livre</b></td>
+        <td>
+          <select name="typelivre" size="4">
+            <option>Algorithmique</option>
+            <option>Base de données</option>
+            <option>Multimédia</option>
+            <option>Développement Web</option>
+          </select>
+        </td>
+      </tr>
+      <tr>
+        <td><b>Titre du livre</b></td>
+        <td><input type="text" name="titrelivre"></td>
+      </tr>
+      <tr>
+        <td><b>Nombre d'exemplaire</b></td>
+        <td><input type="number" name="nbrexemplaires" min="0"></td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <input type="submit" value="Ajouter">
+          <input type="reset" value="Annuler">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

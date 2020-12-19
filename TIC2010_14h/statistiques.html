@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Liste des livres empruntés</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="valider.js"></script>
+</head>
+<body>
+  <h1>Liste des livres empruntés</h1>
+  <form action="statistiques.php" method="post" name="f" onsubmit="return verif3()">
+    <table>
+      <tr>
+        <td><b>Type du livre</b></td>
+        <td>
+          <label><input type="radio" name="typelivre" value="Algorithmique"> Algorithmique</label><br>
+          <label><input type="radio" name="typelivre" value="Base de données"> Base de données</label><br>
+          <label><input type="radio" name="typelivre" value="Multimédia"> Multimédia</label><br>
+          <label><input type="radio" name="typelivre" value="Développement Web"> Développement Web</label>
+        </td>
+      </tr>
+      <tr>
+        <td>&nbsp;</td>
+        <td>
+          <input type="submit" value="Afficher">
+        </td>
+      </tr>
+    </table>
+  </form>
+</body>
+</html>

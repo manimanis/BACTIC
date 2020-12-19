@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Le PPCM de deux entiers</title>
+  <link rel="stylesheet" href="style.css">
+  <script src="calc.js"></script>
+</head>
+
+<body>
+  <h1>Le PPCM de deux entiers</h1>
+  <form name="f">
+    <table>
+      <tr>
+        <td>N=</td>
+        <td><input type="text" name="n" size="5"></td>
+      </tr>
+      <tr>
+        <td>M=</td>
+        <td><input type="text" name="m" size="5"></td>
+      </tr>
+      <tr>
+        <td class="center" colspan="2">
+          <input type="button" value="Calculer" onclick="calc_ppcm()">
+        </td>
+      </tr>
+      <tr>
+        <td>PPCM=</td>
+        <td><input type="text" name="res" size="5" readonly></td>
+      </tr>      
+    </table>
+  </form>
+</body>
+
+</html>
